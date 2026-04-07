@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/portfolio";
-import { ExternalLink, Github, Layers, Code, Globe, MessageSquare, MessageCircle, Link2, Sparkles, Zap, ArrowUpRight } from "lucide-react";
+import { ExternalLink, Github, Layers, Code, Globe, MessageSquare, MessageCircle, Link2, Sparkles, Box } from "lucide-react";
 
 const projectIcons: Record<number, any> = {
-  1: MessageCircle, // Chat App
-  2: Link2,         // URL Shortener  
-  3: Sparkles,      // Your Derma
-  4: Globe,         // Vastu Consultancy
+  1: MessageCircle,
+  2: Link2,
+  3: Sparkles,
+  4: Globe,
 };
 
 const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
@@ -22,160 +22,99 @@ export const Projects = () => {
     : projects.filter(p => p.category === filter);
 
   return (
-    <section id="projects" className="py-32 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-20">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={false}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.2 }}
-              className="flex items-center gap-2 text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
-            >
-              <Zap size={14} className="fill-primary" />
-              Featured Work
-            </motion.div>
-            <motion.h2 
-              className="text-5xl md:text-7xl font-black text-foreground mb-6 tracking-tighter"
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.2 }}
-            >
-              The <span className="text-gradient">Portfolio.</span>
-            </motion.h2>
-            <p className="text-[#666666] text-lg md:text-xl font-light leading-relaxed">
-              A curated selection of my most impactful projects, ranging from high-performance backend systems to modern web platforms.
-            </p>
-          </div>
+    <section id="projects" className="py-24 px-6">
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <motion.h2 
+          className="text-4xl font-bold mb-4 text-foreground"
+          initial={false}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.2 }}
+        >
+          Featured <span className="text-gradient">Projects</span>
+        </motion.h2>
+        <p className="text-[#666666] max-w-2xl mx-auto mb-10 font-light">
+          A showcase of my recent work focusing on backend infrastructure, real-time systems, and scalable web apps.
+        </p>
 
-          <div className="flex flex-wrap items-center gap-3 bg-primary/5 p-1.5 rounded-full border border-primary/10">
-            {categories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => setFilter(cat)}
-                className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-500 ${
-                  filter === cat 
-                    ? "bg-primary text-black shadow-[0_0_20px_rgba(160,139,91,0.2)]" 
-                    : "text-[#555555] hover:text-foreground"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+          {categories.map((cat, idx) => (
+            <button
+              key={idx}
+              onClick={() => setFilter(cat)}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+                filter === cat 
+                  ? "bg-primary text-black" 
+                  : "bg-[#0a0a0a] text-[#555555] border border-[#1a1a1a] hover:border-primary/20 hover:text-[#888888]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-      </div>
 
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto"
-        initial={false}
-        whileInView={{ opacity: 1 }}
-        viewport={{ amount: 0.1 }}
-      >
-        <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => {
-            const IconComponent = projectIcons[project.id] || Zap;
-            
-            return (
-              <motion.div
-                key={project.id}
-                layout
-                initial={false}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ amount: 0.1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative flex flex-col h-full rounded-[32px] bg-[#080808] border border-[#1a1a1a] hover:border-primary/30 transition-all duration-500 overflow-hidden"
-              >
-                {/* Visual Thumbnail Area */}
-                <div className="relative aspect-[16/10] bg-[#0c0c0c] flex items-center justify-center p-12 overflow-hidden border-b border-[#111111]">
-                  {/* Background Grid Pattern */}
-                  <div className="absolute inset-0 bg-[radial-gradient(#ffffff04_1px,transparent_1px)] [background-size:20px_20px] opacity-30" />
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={false}
+          whileInView={{ opacity: 1 }}
+          viewport={{ amount: 0.1 }}
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, index) => {
+              const IconComponent = projectIcons[project.id] || Box;
+              
+              return (
+                <motion.div
+                  key={project.id}
+                  layout
+                  className="glass-card p-8 group hover:border-primary/30 transition-all flex flex-col items-start text-left"
+                  initial={false}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ amount: 0.1 }}
+                >
+                  <div className="p-4 rounded-2xl bg-primary/5 text-primary mb-6 group-hover:bg-primary group-hover:text-black transition-all">
+                    <IconComponent size={24} />
+                  </div>
                   
-                  {/* Unique CSS Art Icon */}
-                  {(() => {
-                    return (
-                      <div className="relative z-10 w-full h-full flex items-center justify-center">
-                        <div className="absolute w-32 h-32 bg-primary/5 rounded-full blur-[40px] group-hover:bg-primary/10 transition-all duration-500" />
-                        <div className="relative flex flex-col items-center">
-                          <motion.div
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            className="p-6 rounded-[24px] bg-primary/5 border border-primary/15 text-primary shadow-[0_0_40px_rgba(160,139,91,0.05)] group-hover:shadow-[0_0_60px_rgba(160,139,91,0.15)] group-hover:border-primary/40 transition-all duration-500"
-                          >
-                            <IconComponent size={40} strokeWidth={1} />
-                          </motion.div>
-                          
-                          {/* Animated Particles */}
-                          <div className="absolute -top-10 -right-10 w-16 h-16 bg-primary/5 rounded-full blur-xl animate-pulse" />
-                          <div className="absolute -bottom-10 -left-10 w-16 h-16 bg-accent/5 rounded-full blur-xl animate-pulse delay-700" />
-                          
-                          {/* Tech Icons Floating */}
-                          <div className="flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
-                            {project.techStack.slice(0, 3).map((tech, i) => (
-                              <span key={i} className="text-[10px] text-primary/40 font-black tracking-widest uppercase">
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })()}
+                  <span className="text-[10px] uppercase tracking-wider text-primary font-bold mb-2">
+                    {project.category}
+                  </span>
                   
-                  {/* Live Link Overlay */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
-                    <a 
-                      href={project.liveUrl !== "#" ? project.liveUrl : project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-5 rounded-full bg-primary text-black hover:scale-110 transition-all duration-300 shadow-[0_0_30px_rgba(160,139,91,0.4)]"
-                    >
-                      <ArrowUpRight size={28} strokeWidth={2.5} />
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    <a href={project.liveUrl !== "#" ? project.liveUrl : project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      {project.title}
                     </a>
-                  </div>
-                </div>
-
-                <div className="p-8 flex-grow flex flex-col">
-                  <div className="flex justify-between items-start mb-6">
-                    <div>
-                      <span className="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-2 block">
-                        {project.category}
-                      </span>
-                      <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-all duration-300">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
+                  </h3>
                   
-                  <p className="text-[#666666] leading-relaxed mb-8 flex-grow font-light">
+                  <p className="text-[#666666] mb-8 font-light flex-grow leading-relaxed">
                     {project.description}
                   </p>
                   
-                  <div className="flex items-center gap-6 pt-6 border-t border-[#111111]">
+                  <div className="flex items-center gap-6 mt-auto">
                     <a 
                       href={project.githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-[11px] font-black tracking-widest text-[#555555] uppercase flex items-center gap-2 hover:text-primary transition-all duration-300"
+                      className="text-sm font-bold text-[#555555] hover:text-primary flex items-center gap-2"
                     >
-                      <Github size={16} /> Code
+                      <Github size={18} /> GitHub
                     </a>
                     {project.liveUrl !== "#" && (
                       <a 
                         href={project.liveUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="text-[11px] font-black tracking-widest text-[#555555] uppercase flex items-center gap-2 hover:text-primary transition-all duration-300"
+                        className="text-sm font-bold text-[#555555] hover:text-primary flex items-center gap-2"
                       >
-                        <ExternalLink size={16} /> Demo
+                        <ExternalLink size={18} /> Live
                       </a>
                     )}
                   </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </AnimatePresence>
-      </motion.div>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
+        </motion.div>
+      </div>
     </section>
   );
 };
