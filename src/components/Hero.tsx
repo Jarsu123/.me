@@ -45,20 +45,27 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-5 py-2 rounded-full bg-primary/5 text-primary text-sm font-medium mb-8 border border-primary/15 tracking-wider uppercase">
-            Welcome to my digital space
-          </span>
+          <div className="flex justify-center mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 tracking-[0.2em] uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Available for New Projects
+            </span>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-foreground">
             Hi, I'm <span className="text-gradient">{profile.name}</span>
           </h1>
+          
           <div className="h-10 md:h-12 mb-8 flex justify-center items-center">
-            <p className="text-xl md:text-3xl font-light text-[#8a8a8a]">
+            <p className="text-2xl md:text-4xl font-bold tracking-tight text-[#8a8a8a]">
               {displayText}
-              <span className="w-0.5 h-8 md:h-10 bg-primary ml-1 inline-block animate-blink-caret" />
+              <span className="w-1 h-8 md:h-12 bg-primary ml-1 inline-block animate-blink-caret" />
             </p>
           </div>
-          <p className="text-lg md:text-xl text-[#666666] max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            Crafting robust backends and scalable systems with FastAPI, Python, and PostgreSQL. Focused on real-time performance and reliability.
+          
+          <p className="text-xl md:text-2xl text-[#666666] max-w-3xl mx-auto mb-14 leading-relaxed font-light">
+            I build <span className="text-foreground font-medium">scalable web applications</span> and powerful backend systems. 
+            Focused on turning <span className="text-accent font-medium">complex problems</span> into elegant solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">

@@ -21,8 +21,8 @@ import {
 
 export const profile = {
   name: "Suraj Dhakad",
-  tagline: "Full Stack Developer | FastAPI | Python | PostgreSQL | Docker | WebSocket",
-  about: "I am a full-stack developer passionate about building scalable APIs, real-time applications, and modern web systems. I enjoy working with Python, FastAPI, PostgreSQL, Docker, JWT authentication, WebSocket, and system design. I am currently learning advanced backend engineering and AI-related technologies.",
+  tagline: "Full Stack Developer | AI/ML Enthusiast | Building Scalable Web Applications",
+  about: "I specialize in building powerful backend systems and intuitive web experiences. From real-time architectures to scalable APIs, I turn complex problems into elegant solutions.",
   resumeUrl: "/resume.pdf", // Path to your uploaded resume
   contact: {
     email: "dhakadsuraj77@gmail.com",
