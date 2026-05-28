@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/portfolio";
-import { ExternalLink, Github, Layers, Code, Globe, MessageSquare, MessageCircle, Link2, Sparkles, Box } from "lucide-react";
+import { ExternalLink, Github, Layers, Code, Globe, MessageSquare, MessageCircle, Link2, Sparkles, Box, Video } from "lucide-react";
 
 const projectIcons: Record<number, any> = {
-  1: MessageCircle,
-  2: Link2,
-  3: Sparkles,
+  1: Sparkles,
+  2: MessageCircle,
+  3: Video,
   4: Globe,
 };
 

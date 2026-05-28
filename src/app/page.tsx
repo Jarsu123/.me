@@ -5,7 +5,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
-import { Experience, Education } from "@/components/Experience";
+import { Education, Certifications } from "@/components/Experience";
 import { Contact, Footer } from "@/components/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -18,8 +18,8 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
-      <Experience />
       <Education />
+      <Certifications />
       <Contact />
       <Footer />
       <ScrollToTop />

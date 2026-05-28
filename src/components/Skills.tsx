@@ -26,25 +26,21 @@ const iconMap: Record<string, any> = {
 const categoryIcons: Record<string, any> = {
   "Languages": Code,
   "Frameworks": Server,
+  "AI / LLM Stack": Cpu,
   "Databases": Database,
-  "Tools": GitBranch,
-  "DevOps": Cpu,
   "Security": ShieldCheck,
-  "Real-time": Zap,
-  "AI/ML": Cpu,
-  "Libraries": Layers
+  "DevOps & Tools": GitBranch,
+  "Core Concepts": Layers
 };
 
 const categoryOrder = [
   "Languages",
   "Frameworks",
+  "AI / LLM Stack",
   "Databases",
-  "Real-time",
-  "Libraries",
   "Security",
-  "DevOps",
-  "Tools",
-  "AI/ML"
+  "DevOps & Tools",
+  "Core Concepts"
 ];
 
 export const Skills = () => {

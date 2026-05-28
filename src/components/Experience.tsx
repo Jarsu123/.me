@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { experience, education } from "@/data/portfolio";
-import { Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
+import { experience, education, certifications } from "@/data/portfolio";
+import { Briefcase, GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 export const Experience = () => {
   return (
@@ -77,6 +77,45 @@ export const Education = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+    </section>
+  );
+};
+
+export const Certifications = () => {
+  return (
+    <section id="certifications" className="py-24 px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-12 flex items-center justify-center gap-3 text-foreground">
+          <Award className="text-primary" />
+          Certifications
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+          {certifications.map((cert, index) => (
+            <motion.div 
+              key={index}
+              className="glass-card p-6 relative overflow-hidden group border border-[#1a1a1a] hover:border-primary/40 transition-all flex items-center gap-4"
+              initial={false}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5, borderColor: "rgba(160, 139, 91, 0.4)" }}
+            >
+              <div className="p-3.5 rounded-xl bg-[#060606] border border-[#1a1a1a] text-primary transition-all group-hover:border-primary/20 group-hover:bg-primary/5">
+                <Award size={24} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  {cert.name}
+                </h3>
+                <p className="text-[#666666] font-medium text-sm">
+                  {cert.issuer}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
