@@ -8,6 +8,7 @@ import { Projects } from "@/components/Projects";
 import { Education, Certifications } from "@/components/Experience";
 import { Contact, Footer } from "@/components/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { RevealAnimation } from "@/components/RevealAnimation";
 
 export default function Home() {
   return (
@@ -15,12 +16,12 @@ export default function Home() {
       <CursorGlow />
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Certifications />
-      <Contact />
+      <RevealAnimation><About /></RevealAnimation>
+      <RevealAnimation><Skills /></RevealAnimation>
+      <RevealAnimation><Projects /></RevealAnimation>
+      <RevealAnimation><Education /></RevealAnimation>
+      <RevealAnimation><Certifications /></RevealAnimation>
+      <RevealAnimation><Contact /></RevealAnimation>
       <Footer />
       <ScrollToTop />
     </main>
