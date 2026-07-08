@@ -5,8 +5,8 @@ export const profile = {
   resumeUrl: "/Suraj_Dhakad_Resume.pdf", // Path to your uploaded resume
   contact: {
     email: "dhakadsuraj77@gmail.com",
-    github: "https://github.com/Jarsu123",
-    linkedin: "https://linkedin.com/in/surajdhakad",
+    github: "https://github.com/Suraj516732",
+    linkedin: "https://www.linkedin.com/in/suraj-dhakad-574a273ba/",
     phone: "+91-7879553211"
   }
 };
@@ -85,7 +85,7 @@ export const projects = [
     ],
     techStack: ["Python", "OpenAI Whisper", "LangChain", "RAG", "Streamlit", "Sarvam AI"],
     image: "/images/video-assistant.png",
-    githubUrl: "https://github.com/Jarsu123/AI-Video-Assistant",
+    githubUrl: "https://github.com/Suraj516732/AI-Video-Assistant",
     liveUrl: "#",
     category: "AI / RAG"
   },
@@ -101,7 +101,7 @@ export const projects = [
     ],
     techStack: ["LangGraph", "FastAPI", "React", "PostgreSQL", "FAISS", "Redis", "SSE"],
     image: "/images/perplexity.png",
-    githubUrl: "https://github.com/Jarsu123/Perplexity-2.0",
+    githubUrl: "https://github.com/Suraj516732/Perplexity-2.0",
     liveUrl: "#",
     category: "AI / Agentic"
   },
@@ -116,7 +116,7 @@ export const projects = [
     ],
     techStack: ["FastAPI", "WebSockets", "Redis Pub/Sub", "PostgreSQL", "JWT", "RBAC"],
     image: "/images/chat-app.png",
-    githubUrl: "https://github.com/Jarsu123/Realtime-chat-app",
+    githubUrl: "https://github.com/Suraj516732/Realtime-chat-app",
     liveUrl: "#",
     category: "Real-time"
   }
