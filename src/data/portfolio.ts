@@ -1,8 +1,8 @@
 export const profile = {
   name: "Suraj Dhakad",
-  tagline: "Backend Developer | AI Engineer",
-  about: "Backend Developer and AI Engineer with hands-on experience building production-grade APIs, RAG pipelines, and real-time systems. Proficient in FastAPI, LangGraph, and LangChain for developing LLM-powered applications. Skilled in designing scalable architectures using PostgreSQL, Redis, Docker, and WebSockets. Strong background in AI/ML integration, vector search with FAISS, and multi-agent workflow orchestration.",
-  resumeUrl: "/Master resume Suraj_01.pdf", // Path to your uploaded resume
+  tagline: "Backend Developer | AI/ML Engineer",
+  about: "Backend Developer and AI/ML Engineer experienced in building scalable backend systems and LLM-powered applications. Proficient in Python, FastAPI, LangGraph, and LangChain for developing RAG pipelines and multi-agent workflows, with a strong foundation in Machine Learning and Deep Learning using TensorFlow and Scikit-learn. Adept at designing production-grade architectures with PostgreSQL and Redis, integrating vector search and real-time data processing for real-world AI solutions.",
+  resumeUrl: "/Suraj_Dhakad_Resume.pdf", // Path to your uploaded resume
   contact: {
     email: "dhakadsuraj77@gmail.com",
     github: "https://github.com/Jarsu123",
@@ -15,99 +15,73 @@ export const skills = [
   // Languages
   { name: "Python", level: 95, category: "Languages", icon: "Code" },
   { name: "SQL", level: 90, category: "Languages", icon: "Database" },
-  { name: "JavaScript", level: 80, category: "Languages", icon: "Code" },
-  { name: "Bash", level: 75, category: "Languages", icon: "Terminal" },
 
-  // Backend Frameworks
-  { name: "FastAPI", level: 95, category: "Frameworks", icon: "Server" },
-  { name: "Flask", level: 80, category: "Frameworks", icon: "Server" },
-  { name: "REST APIs", level: 95, category: "Frameworks", icon: "Globe" },
-  { name: "WebSockets", level: 90, category: "Frameworks", icon: "Globe" },
-  { name: "Pydantic", level: 90, category: "Frameworks", icon: "Layers" },
-  { name: "Async Python", level: 90, category: "Frameworks", icon: "Cpu" },
+  // Backend
+  { name: "FastAPI", level: 95, category: "Backend", icon: "Server" },
+  { name: "REST APIs", level: 95, category: "Backend", icon: "Globe" },
+  { name: "WebSockets", level: 90, category: "Backend", icon: "Globe" },
+  { name: "Pydantic", level: 90, category: "Backend", icon: "Layers" },
 
-  // AI / LLM Stack
-  { name: "LangChain", level: 90, category: "AI / LLM Stack", icon: "Cpu" },
-  { name: "LangGraph", level: 95, category: "AI / LLM Stack", icon: "Cpu" },
-  { name: "LangSmith", level: 85, category: "AI / LLM Stack", icon: "Terminal" },
-  { name: "RAG Pipelines", level: 95, category: "AI / LLM Stack", icon: "Layers" },
-  { name: "Prompt Engineering", level: 90, category: "AI / LLM Stack", icon: "Code" },
-  { name: "Multi-Agent Systems", level: 95, category: "AI / LLM Stack", icon: "Cpu" },
-  { name: "OpenAI API", level: 90, category: "AI / LLM Stack", icon: "Globe" },
-  { name: "Groq API", level: 90, category: "AI / LLM Stack", icon: "Globe" },
+  // AI / LLM
+  { name: "LangChain", level: 90, category: "AI / LLM", icon: "Cpu" },
+  { name: "LangGraph", level: 95, category: "AI / LLM", icon: "Cpu" },
+  { name: "LangSmith", level: 85, category: "AI / LLM", icon: "Terminal" },
+  { name: "RAG", level: 95, category: "AI / LLM", icon: "Layers" },
+  { name: "Prompt Engineering", level: 90, category: "AI / LLM", icon: "Code" },
+  { name: "Multi-Agent Systems", level: 95, category: "AI / LLM", icon: "Cpu" },
+  { name: "OpenAI API", level: 90, category: "AI / LLM", icon: "Globe" },
+  { name: "Groq API", level: 90, category: "AI / LLM", icon: "Globe" },
 
-  // Vector Search & Databases
-  { name: "FAISS", level: 90, category: "Databases", icon: "Database" },
-  { name: "PostgreSQL", level: 90, category: "Databases", icon: "Database" },
-  { name: "MySQL", level: 80, category: "Databases", icon: "Database" },
-  { name: "Redis", level: 90, category: "Databases", icon: "Zap" },
-  { name: "pgvector", level: 85, category: "Databases", icon: "Layers" },
+  // Machine Learning
+  { name: "Scikit-learn", level: 85, category: "Machine Learning", icon: "Cpu" },
+  { name: "TensorFlow", level: 80, category: "Machine Learning", icon: "Cpu" },
+  { name: "Keras", level: 80, category: "Machine Learning", icon: "Cpu" },
 
-  // Authentication & Security
-  { name: "JWT", level: 90, category: "Security", icon: "Shield" },
-  { name: "OAuth2", level: 85, category: "Security", icon: "Shield" },
-  { name: "RBAC", level: 90, category: "Security", icon: "Shield" },
-  { name: "Secure API Design", level: 95, category: "Security", icon: "Shield" },
+  // Deep Learning
+  { name: "ANN", level: 85, category: "Deep Learning", icon: "Cpu" },
+  { name: "CNN", level: 85, category: "Deep Learning", icon: "Cpu" },
+  { name: "RNN", level: 80, category: "Deep Learning", icon: "Cpu" },
+  { name: "LSTM", level: 80, category: "Deep Learning", icon: "Cpu" },
+  { name: "OpenAI Whisper", level: 85, category: "Deep Learning", icon: "Terminal" },
 
-  // DevOps & Tools
-  { name: "Docker", level: 85, category: "DevOps & Tools", icon: "Box" },
-  { name: "Git", level: 90, category: "DevOps & Tools", icon: "GitBranch" },
-  { name: "GitHub Actions", level: 85, category: "DevOps & Tools", icon: "GitBranch" },
-  { name: "Linux", level: 80, category: "DevOps & Tools", icon: "Terminal" },
-  { name: "Postman", level: 90, category: "DevOps & Tools", icon: "Globe" },
-  { name: "Railway", level: 85, category: "DevOps & Tools", icon: "Globe" },
-  { name: "Render", level: 80, category: "DevOps & Tools", icon: "Globe" },
-  { name: "Vercel", level: 85, category: "DevOps & Tools", icon: "Globe" },
+  // Databases & Vector Search
+  { name: "PostgreSQL", level: 90, category: "Databases & Vector Search", icon: "Database" },
+  { name: "MySQL", level: 80, category: "Databases & Vector Search", icon: "Database" },
+  { name: "Redis", level: 90, category: "Databases & Vector Search", icon: "Zap" },
+  { name: "FAISS", level: 90, category: "Databases & Vector Search", icon: "Database" },
+  { name: "pgvector", level: 85, category: "Databases & Vector Search", icon: "Layers" },
 
-  // Core Concepts
-  { name: "System Design", level: 90, category: "Core Concepts", icon: "Cpu" },
-  { name: "Caching", level: 90, category: "Core Concepts", icon: "Zap" },
-  { name: "Authentication", level: 90, category: "Core Concepts", icon: "Shield" },
-  { name: "Vector Search", level: 95, category: "Core Concepts", icon: "Database" },
-  { name: "Async Processing", level: 90, category: "Core Concepts", icon: "Cpu" },
+  // Developer Tools
+  { name: "Docker", level: 85, category: "Developer Tools", icon: "Box" },
+  { name: "Git", level: 90, category: "Developer Tools", icon: "GitBranch" },
+  { name: "GitHub Actions", level: 85, category: "Developer Tools", icon: "GitBranch" },
+  { name: "Postman", level: 90, category: "Developer Tools", icon: "Globe" },
+  { name: "Railway", level: 85, category: "Developer Tools", icon: "Globe" },
+  { name: "Render", level: 80, category: "Developer Tools", icon: "Globe" },
+  { name: "Vercel", level: 85, category: "Developer Tools", icon: "Globe" },
+
+  // Authentication
+  { name: "JWT", level: 90, category: "Authentication", icon: "Shield" },
+  { name: "OAuth2", level: 85, category: "Authentication", icon: "Shield" },
+  { name: "RBAC", level: 90, category: "Authentication", icon: "Shield" },
+
+  // Data Analysis & Visualization
+  { name: "NumPy", level: 90, category: "Data Analysis & Visualization", icon: "Layers" },
+  { name: "Pandas", level: 90, category: "Data Analysis & Visualization", icon: "Database" },
+  { name: "Matplotlib", level: 85, category: "Data Analysis & Visualization", icon: "Layers" },
+  { name: "Seaborn", level: 85, category: "Data Analysis & Visualization", icon: "Layers" },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "Perplexity 2.0 — AI Search Engine",
-    description: "Built a production-style AI search engine with multi-step reasoning, real-time web search, and contextual answer generation using LangGraph-orchestrated multi-agent workflows.",
-    features: [
-      "Designed a full RAG pipeline using FAISS vector store for semantic search and grounded, citation-backed responses.",
-      "Implemented Server-Sent Events (SSE) for real-time response streaming to minimize perceived latency.",
-      "Integrated Tavily Search API for live web retrieval and Redis caching to optimize API usage and response speed.",
-      "Engineered scalable FastAPI backend with PostgreSQL for persistent chat memory, sessions, and source tracking."
-    ],
-    techStack: ["LangGraph", "FastAPI", "React", "PostgreSQL", "FAISS", "Redis", "SSE"],
-    image: "/images/perplexity.png",
-    githubUrl: "https://github.com/Jarsu123/Perplexity-2.0",
-    liveUrl: "#",
-    category: "AI / Agentic"
-  },
-  {
-    id: 2,
-    title: "Real-Time Chat Application",
-    description: "Developed a full-stack real-time messaging system using WebSockets with support for concurrent users and low-latency delivery.",
-    features: [
-      "Implemented secure JWT Authentication and Role-Based Access Control (RBAC) to handle authorization layers.",
-      "Integrated Redis Pub/Sub for horizontal scalability across multiple server instances.",
-      "Designed modular REST APIs with PostgreSQL schema for chat history, user management, and room states."
-    ],
-    techStack: ["FastAPI", "WebSockets", "Redis Pub/Sub", "PostgreSQL", "JWT", "RBAC"],
-    image: "/images/chat-app.png",
-    githubUrl: "https://github.com/Jarsu123/Realtime-chat-app",
-    liveUrl: "#",
-    category: "Real-time"
-  },
-  {
-    id: 3,
     title: "AI Video Assistant",
     description: "Built an AI assistant that processes YouTube videos and local media files — transcribing, indexing, and enabling conversational Q&A over video content.",
     features: [
-      "Implemented speech-to-text transcription using OpenAI Whisper and a RAG-based querying pipeline for contextually accurate answers.",
-      "Generated automated summaries, action items, key decisions, and timestamped highlights automatically using LangChain.",
-      "Integrated Sarvam AI for multilingual transcription and translation for regional language content.",
-      "Designed a Streamlit conversational UI for intuitive real-time interactions with video content."
+      "Implemented speech-to-text transcription using OpenAI Whisper and a RAG-based querying pipeline for contextually accurate answers from video content.",
+      "Generated AI-powered summaries, action items, key decisions, and timestamped highlights automatically using LangChain chains.",
+      "Integrated Sarvam AI for multilingual transcription and translation, expanding usability for regional language content.",
+      "Designed a Streamlit conversational UI for intuitive real-time interactions with video content — zero prompt-engineering required from end users."
     ],
     techStack: ["Python", "OpenAI Whisper", "LangChain", "RAG", "Streamlit", "Sarvam AI"],
     image: "/images/video-assistant.png",
@@ -116,20 +90,35 @@ export const projects = [
     category: "AI / RAG"
   },
   {
-    id: 4,
-    title: "Vastu Consultancy",
-    description: "A high-performance professional web platform for Vastu consultancy services, featuring modern styling, smooth transitions, and dynamic client booking.",
+    id: 2,
+    title: "Perplexity 2.0 — AI-Powered Search Engine",
+    description: "Built a production-style AI search engine with multi-step reasoning, real-time web search, and contextual answer generation using LangGraph-orchestrated multi-agent workflows.",
     features: [
-      "Modern UI/UX design with customized visual components.",
-      "Integrated consultation booking workflow.",
-      "Framer Motion layout transitions for an immersive experience.",
-      "Fully responsive and SEO optimized."
+      "Designed a full RAG pipeline using FAISS vector store for semantic search and grounded, citation-backed responses — reducing hallucination risk significantly.",
+      "Implemented Server-Sent Events (SSE) for streaming responses, achieving low-latency output comparable to production AI systems.",
+      "Integrated Tavily Search API for live web retrieval and Redis caching to reduce redundant API calls and improve response throughput.",
+      "Engineered scalable FastAPI backend with PostgreSQL for persistent chat memory, user sessions, and source tracking."
     ],
-    techStack: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/images/vastu.png",
-    githubUrl: "https://github.com/Jarsu123/Vastu-consultance",
-    liveUrl: "https://www.healingconsultance.com",
-    category: "Web App"
+    techStack: ["LangGraph", "FastAPI", "React", "PostgreSQL", "FAISS", "Redis", "SSE"],
+    image: "/images/perplexity.png",
+    githubUrl: "https://github.com/Jarsu123/Perplexity-2.0",
+    liveUrl: "#",
+    category: "AI / Agentic"
+  },
+  {
+    id: 3,
+    title: "Real-Time Chat Application",
+    description: "Developed a full-stack real-time messaging system using WebSockets with support for concurrent users and low-latency delivery.",
+    features: [
+      "Implemented JWT authentication and Role-Based Access Control (RBAC) for secure, scoped access across user roles.",
+      "Integrated Redis Pub/Sub for horizontal scalability — enabling message broadcasting across multiple server instances.",
+      "Designed normalized PostgreSQL schema with modular REST APIs for user management, message history, and room operations."
+    ],
+    techStack: ["FastAPI", "WebSockets", "Redis Pub/Sub", "PostgreSQL", "JWT", "RBAC"],
+    image: "/images/chat-app.png",
+    githubUrl: "https://github.com/Jarsu123/Realtime-chat-app",
+    liveUrl: "#",
+    category: "Real-time"
   }
 ];
 
